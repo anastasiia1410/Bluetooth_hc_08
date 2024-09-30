@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/permissionFragment">
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="com.example.presentation.screens.bluetooth_perm.PermissionFragment"
+        android:label="PermissionFragment"
+        tools:layout="@layout/fragment_perms">
+        <action
+            android:id="@+id/action_permissionFragment_to_deviceFragment"
+            app:destination="@id/deviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceFragment"
+        android:name="com.example.presentation.screens.device.DeviceFragment"
+        android:label="DeviceFragment"
+        tools:layout="@layout/fragment_device">
+        <action
+            android:id="@+id/action_deviceFragment_to_paramsListFragment"
+            app:destination="@id/paramsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseParamFragment"
+        android:name="com.example.presentation.screens.connected_device.ChooseParamFragment"
+        android:label="ChooseParamFragment"
+        tools:layout="@layout/fragment_choose_param">
+        <argument
+            android:name="param"
+            app:argType="com.example.presentation.screens.connected_device.entity.Params" />
+        <action
+            android:id="@+id/action_chooseParamFragment_to_paramsListFragment"
+            app:popUpTo="@id/paramsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paramsListFragment"
+        android:name="com.example.presentation.screens.connected_device.ParamsListFragment"
+        android:label="ParamsListFragment"
+        tools:layout="@layout/fragment_params_list">
+        <action
+            android:id="@+id/action_paramsListFragment_to_chooseParamFragment"
+            app:destination="@id/chooseParamFragment" />
+        <argument
+            android:name="macAddress"
+            app:argType="string" />
+    </fragment>
+</navigation>

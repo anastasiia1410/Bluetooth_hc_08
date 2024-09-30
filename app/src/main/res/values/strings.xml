@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Bluetooth hc-08</string>
+    <string name="paired_devices">Підключені пристрої</string>
+    <string name="search_devices">Пошук пристроїв</string>
+    <string name="add_param">Введіть інформацію</string>
+    <string name="send">Відправити</string>
+    <string name="scan">Сканувати</string>
+    <string name="rssi_pattern">%1d dBm</string>
+    <string name="button_connect_and_discover_services">Connect &amp; discover services</string>
+    <string name="title_service">Service:</string>
+    <string name="title_characteristic">Characteristic:</string>
+    <string name="button_connect">Connect</string>
+    <string name="button_read">Read</string>
+    <string name="prefix_hex">0x</string>
+    <string name="edit_text_write_input">Write input</string>
+    <string name="button_write">Write</string>
+    <string name="button_setup_notification">Register indications</string>
+    <string name="hex_mode">HEX Mode</string>
+    <string name="newline">Newline</string>
+
+</resources>
